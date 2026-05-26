@@ -1,13 +1,11 @@
 # NOMU Zurich — Decap CMS configuration
 #
-# Local development: `local_backend: true` lets the CMS write directly to your
-# local filesystem via `npx decap-server` (run `npm run cms` in a second
-# terminal alongside `npm run dev`). No GitHub account or auth required.
+# Production: uses Netlify Identity + git-gateway. The owner logs in at
+# /admin via the Netlify Identity widget; Decap commits edits to the `main`
+# branch and Netlify auto-redeploys.
 #
-# When you pick a deploy target, swap `backend.name` to `github` (with an OAuth
-# proxy) or `git-gateway` (Netlify Identity) and remove `local_backend: true`.
-
-local_backend: true
+# To enable local editing again, add `local_backend: true` at the top and run
+# `npm run cms` alongside `npm run dev`.
 
 backend:
   name: git-gateway

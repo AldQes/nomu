@@ -65,21 +65,28 @@ The site's content lives in plain `.json` files under [`content/`](./content/). 
 | Menu categories & items | `content/menu/*.json` (one file per category) |
 | Photos | uploaded to `public/images/` from the CMS |
 
+### Production workflow (Netlify)
+
+1. Owner goes to `https://<your-site>/admin`.
+2. Logs in via Netlify Identity (email + password set from the invite link).
+3. Edits text / swaps photos. Hits **Publish**.
+4. Decap commits to `main` → Netlify auto-redeploys (~30–60s) → site updates.
+
 ### Local editing workflow
 
-1. Run `npm run dev` and `npm run cms` in two terminals.
-2. Visit <http://localhost:3000/admin>. Decap detects the local proxy and lets you log in as "Dev User" — no password.
-3. Edit text and swap photos. Hit **Publish** to write changes to the JSON files on disk.
-4. The site hot-reloads with your changes.
+To edit content locally without going through Netlify, temporarily add
+`local_backend: true` at the top of [`public/admin/config.yml`](./public/admin/config.yml),
+then in two terminals:
 
-### Deploying with the CMS
+```bash
+npm run dev    # Terminal 1
+npm run cms    # Terminal 2 — the local proxy on :8081
+```
 
-The CMS currently uses `local_backend: true` in [`public/admin/config.yml`](./public/admin/config.yml). When you pick a deploy target:
-
-- **Netlify** → switch to `backend: { name: git-gateway }` and enable Netlify Identity. Remove the `local_backend: true` line.
-- **Vercel / other** → switch to `backend: { name: github, repo: "owner/repo", branch: "main" }` and set up a GitHub OAuth proxy (Decap docs cover this). Remove the `local_backend: true` line.
-
-Either way, the owner ends up at `https://yoursite.com/admin`, logs in, edits, and clicks Publish — which commits to the repo and triggers a redeploy.
+Visit <http://localhost:3000/admin>. Decap detects the local proxy and lets
+you log in as "Dev User" — no password. Edits write directly to the JSON
+files on disk and the site hot-reloads. Remove `local_backend: true` again
+before committing.
 
 ## Environment Variables
 
