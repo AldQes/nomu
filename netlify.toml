@@ -1,0 +1,10 @@
+# Netlify configuration for NOMU Zurich Next.js + Decap CMS
+
+[build]
+  command = "npm run build"
+  # Next.js outputs to .next by default
+  publish = ".next"
+
+# Git Gateway needs these environment variables set in Netlify UI:
+# - NETLIFY_AUTH_TOKEN (auto-provided by Netlify)
+# - GITHUB_REPO (format: owner/repo, e.g. AldQes/nomu)
