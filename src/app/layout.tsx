@@ -50,7 +50,11 @@ export default function RootLayout({
           {`
             if (window.netlifyIdentity) {
               window.netlifyIdentity.on("init", function (user) {
-                if (!user) {
+                // If already logged in (e.g., returning user or just confirmed invite), redirect
+                if (user) {
+                  document.location.href = "/admin/";
+                } else {
+                  // Otherwise, wait for login to complete
                   window.netlifyIdentity.on("login", function () {
                     document.location.href = "/admin/";
                   });
