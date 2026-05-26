@@ -1,0 +1,230 @@
+# NOMU Zurich — Decap CMS configuration
+#
+# Local development: `local_backend: true` lets the CMS write directly to your
+# local filesystem via `npx decap-server` (run `npm run cms` in a second
+# terminal alongside `npm run dev`). No GitHub account or auth required.
+#
+# When you pick a deploy target, swap `backend.name` to `github` (with an OAuth
+# proxy) or `git-gateway` (Netlify Identity) and remove `local_backend: true`.
+
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+# Editor-friendly display
+site_url: "http://localhost:3000"
+display_url: "http://localhost:3000"
+logo_url: "/images/NOMU_PIC_3.jpeg"
+
+collections:
+  # ─────────────────────────────────────────────────────────────
+  # SITE SETTINGS — global info shown in footer, contact page, etc.
+  # ─────────────────────────────────────────────────────────────
+  - name: "site"
+    label: "Site Settings"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: "global"
+        label: "Global Site Info"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "Site Name", name: "name", widget: "string" }
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "Street", name: "street", widget: "string" }
+              - { label: "Country", name: "country", widget: "string" }
+          - { label: "Phone (display)", name: "phone", widget: "string", hint: "How the phone number appears on the site, e.g. +41 79 175 80 80" }
+          - { label: "Phone (link)", name: "phoneHref", widget: "string", hint: "Digits only with country code, used for the clickable link. e.g. +41791758080" }
+          - { label: "Email", name: "email", widget: "string" }
+          - label: "Instagram"
+            name: "instagram"
+            widget: "object"
+            fields:
+              - { label: "Handle", name: "handle", widget: "string", hint: "Shown on the site, e.g. @nomu.zurich" }
+              - { label: "URL", name: "url", widget: "string", hint: "Full link, e.g. https://www.instagram.com/nomu.zurich/" }
+          - label: "Opening Hours"
+            name: "hours"
+            widget: "list"
+            summary: "{{fields.day}}: {{fields.hours}}"
+            fields:
+              - { label: "Day(s)", name: "day", widget: "string", hint: "e.g. Tuesday – Sunday" }
+              - { label: "Hours", name: "hours", widget: "string", hint: "e.g. 10:00 – 19:45" }
+          - { label: "Google Maps Embed URL", name: "mapEmbedUrl", widget: "string", hint: "The embed URL from Google Maps → Share → Embed a map → Copy HTML, then take just the src value." }
+
+  # ─────────────────────────────────────────────────────────────
+  # PAGES — copy + images for each page
+  # ─────────────────────────────────────────────────────────────
+  - name: "pages"
+    label: "Pages"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "content/pages/home.json"
+        format: "json"
+        fields:
+          - label: "Hero (top of page)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Background Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", hint: "Describes the image for accessibility / screen readers" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Primary Button Text", name: "primaryCtaText", widget: "string", default: "Reserve a Table" }
+              - { label: "Secondary Button Text", name: "secondaryCtaText", widget: "string", default: "View Menu" }
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - label: "Featured Items"
+            name: "featured"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "string" }
+              - { label: "Button Text", name: "ctaText", widget: "string", default: "View Full Menu" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "description", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Price (CHF)", name: "price", widget: "string", hint: "Just the number, e.g. 17.60" }
+          - label: "Reservation Section"
+            name: "reservation"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "string" }
+          - label: "Private Events Teaser"
+            name: "eventsTeaser"
+            widget: "object"
+            fields:
+              - { label: "Background Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Button Text", name: "ctaText", widget: "string", default: "Learn More" }
+
+      - name: "menu"
+        label: "Menu Page"
+        file: "content/pages/menu.json"
+        format: "json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subheading", name: "subheading", widget: "string" }
+          - label: "Notes (shown below the menu)"
+            name: "notes"
+            widget: "list"
+            field: { label: "Note", name: "note", widget: "string" }
+
+      - name: "contact"
+        label: "Contact Page"
+        file: "content/pages/contact.json"
+        format: "json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subheading", name: "subheading", widget: "string" }
+          - { label: "Opening Hours Heading", name: "hoursHeading", widget: "string", default: "Opening Hours" }
+          - { label: "Map Heading", name: "mapHeading", widget: "string", default: "Find Us" }
+          - { label: "Form Heading", name: "formHeading", widget: "string" }
+          - { label: "Form Subheading", name: "formSubheading", widget: "string" }
+
+      - name: "private-events"
+        label: "Private Events Page"
+        file: "content/pages/private-events.json"
+        format: "json"
+        fields:
+          - label: "Hero (top of page)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Background Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Browser Tab Description (SEO)", name: "metaDescription", widget: "text" }
+          - label: "Pitch Section"
+            name: "pitch"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Capacity Note", name: "capacityNote", widget: "string" }
+              - { label: "Extra Note", name: "extraNote", widget: "text" }
+              - label: "Event Types"
+                name: "eventTypes"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "What's Included Section"
+            name: "includes"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "Pricing Section"
+            name: "pricing"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - label: "Inquiry Section"
+            name: "inquiry"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+  # ─────────────────────────────────────────────────────────────
+  # MENU — one file per category (Coffee, Matcha, Toast, etc.)
+  # ─────────────────────────────────────────────────────────────
+  - name: "menu"
+    label: "Menu Categories"
+    label_singular: "Menu Category"
+    folder: "content/menu"
+    format: "json"
+    create: true
+    slug: "{{id}}"
+    identifier_field: "name"
+    editor: { preview: false }
+    summary: "{{name}} (order: {{order}})"
+    fields:
+      - { label: "ID (slug)", name: "id", widget: "string", hint: "Lowercase, no spaces, used in URLs. e.g. iced-coffee" }
+      - { label: "Name", name: "name", widget: "string", hint: "Displayed as the category heading" }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 99, hint: "Lower numbers appear first on the menu page" }
+      - { label: "Category Description", name: "description", widget: "string", required: false, hint: "Optional — shown below the category name" }
+      - { label: "Category Image", name: "image", widget: "image", required: false, hint: "Optional — large photo shown with this category" }
+      - label: "Items"
+        name: "items"
+        widget: "list"
+        summary: "{{fields.name}} — {{fields.price}} CHF"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Price (CHF)", name: "price", widget: "number", value_type: "float", default: 0, step: 0.1 }
+          - { label: "Description", name: "description", widget: "string", required: false, hint: "Optional — shown below the item name" }
+          - { label: "Price Note", name: "priceNote", widget: "string", required: false, hint: "Optional — overrides the price display, e.g. '+1 CHF' for add-ons" }
+          - { label: "Is Add-on?", name: "isAddOn", widget: "boolean", required: false, default: false, hint: "Mark items in the Add-ons category" }

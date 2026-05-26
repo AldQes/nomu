@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "image": "/images/NOMU_PIC_3.jpeg",
+    "imageAlt": "NOMU Zürich interior with rattan pendant lights, olive tree and warm beige tones",
+    "title": "Private Events at NOMU",
+    "subtitle": "Your special occasion, our beautiful space."
+  },
+  "metaDescription": "Host your next birthday, corporate event, baby shower, or brand activation at NOMU Zurich. Exclusive venue hire, custom menus, and dedicated staff in our beautiful space.",
+  "pitch": {
+    "heading": "A space for every occasion",
+    "body": "Whether you're celebrating a milestone, hosting a team off-site, or launching something new — NOMU offers a warm, intimate setting that makes every event feel special.",
+    "capacityNote": "Capacity: approximately 40 guests seated, up to 60 standing.",
+    "extraNote": "Food & drink packages available for every budget. Flexible duration — morning, afternoon, or full evening.",
+    "eventTypes": [
+      {
+        "title": "Birthdays",
+        "description": "Toast another trip around the sun with friends, matcha cocktails, and our all-day brunch spread."
+      },
+      {
+        "title": "Corporate Events",
+        "description": "Team lunches, client dinners, or workshops in a calm setting with great coffee and food."
+      },
+      {
+        "title": "Baby Showers",
+        "description": "A cozy daytime celebration with beautiful tablescapes, fresh smoothies, and sweet treats."
+      },
+      {
+        "title": "Brand Activations",
+        "description": "Showcase your brand in a photogenic space that's already styled with the NOMU aesthetic."
+      }
+    ]
+  },
+  "includes": {
+    "heading": "What's included",
+    "items": [
+      {
+        "title": "Exclusive Venue Hire",
+        "description": "The entire café is yours for the duration of your event — no shared space, no interruptions."
+      },
+      {
+        "title": "Custom Food & Drink Menu",
+        "description": "We'll work with you to design a menu that fits your event — from grazing tables to plated brunch, matcha cocktails to specialty coffee."
+      },
+      {
+        "title": "Setup & Cleanup",
+        "description": "Arrive to a beautifully prepared space and leave the tidying to us. Tables, florals, place settings — we handle it all."
+      },
+      {
+        "title": "Dedicated Staff",
+        "description": "Friendly, professional service throughout your event so you and your guests can relax and enjoy."
+      }
+    ]
+  },
+  "pricing": {
+    "label": "Price on request",
+    "body": "Every event is different — we'll put together a tailored quote based on your date, guest count, and menu choices. No hidden fees, no surprise charges."
+  },
+  "inquiry": {
+    "heading": "Let's plan your event",
+    "body": "Fill out the form below and we'll get back to you within 24 hours with availability and a personalised quote."
+  }
+}

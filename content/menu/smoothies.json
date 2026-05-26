@@ -1,0 +1,28 @@
+{
+  "id": "smoothies",
+  "name": "Smoothies",
+  "order": 6,
+  "image": "/images/NOMU_PIC__5.jpeg",
+  "items": [
+    {
+      "name": "Blue Sky",
+      "price": 13.7,
+      "description": "Mango, blueberry, banana, coconut, blue spirulina"
+    },
+    {
+      "name": "Banana Protein Crush",
+      "price": 12.8,
+      "description": "Peanut butter, vanilla, banana, protein powder"
+    },
+    {
+      "name": "Hojicha Hug",
+      "price": 13.7,
+      "description": "Hojicha powder, honey, dates, vanilla, banana, cinnamon"
+    },
+    {
+      "name": "Aloha Collagen",
+      "price": 12.8,
+      "description": "Strawberry, raspberry, mango, collagen powder, Greek yoghurt, coconut"
+    }
+  ]
+}

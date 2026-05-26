@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --nomu-beige: #F5EFE6;
+  --nomu-beige-light: #E8DFD3;
+  --nomu-stone: #C9BFB2;
+  --nomu-soft-white: #FBF9F5;
+  --nomu-charcoal: #2B2A26;
+  --nomu-sage: #A8B5A0;
+}
+
+@theme inline {
+  --color-background: var(--nomu-soft-white);
+  --color-foreground: var(--nomu-charcoal);
+
+  --color-nomu-beige: var(--nomu-beige);
+  --color-nomu-beige-light: var(--nomu-beige-light);
+  --color-nomu-stone: var(--nomu-stone);
+  --color-nomu-soft-white: var(--nomu-soft-white);
+  --color-nomu-charcoal: var(--nomu-charcoal);
+  --color-nomu-sage: var(--nomu-sage);
+
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--nomu-soft-white);
+  color: var(--nomu-charcoal);
+  font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ─── Scroll Reveal Animations ─── */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+.scroll-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children — apply to children of scroll-reveal for cascade effect */
+.scroll-reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.scroll-reveal--visible.scroll-reveal-stagger > *:nth-child(1) { transition-delay: 0ms; }
+.scroll-reveal--visible.scroll-reveal-stagger > *:nth-child(2) { transition-delay: 100ms; }
+.scroll-reveal--visible.scroll-reveal-stagger > *:nth-child(3) { transition-delay: 200ms; }
+.scroll-reveal--visible.scroll-reveal-stagger > *:nth-child(4) { transition-delay: 300ms; }
+.scroll-reveal--visible.scroll-reveal-stagger > *:nth-child(5) { transition-delay: 400ms; }
+.scroll-reveal--visible.scroll-reveal-stagger > *:nth-child(6) { transition-delay: 500ms; }
+.scroll-reveal--visible.scroll-reveal-stagger > *:nth-child(7) { transition-delay: 600ms; }
+.scroll-reveal--visible.scroll-reveal-stagger > *:nth-child(8) { transition-delay: 700ms; }
+.scroll-reveal--visible.scroll-reveal-stagger > * {
+  opacity: 1;
+  transform: translateY(0);
+}

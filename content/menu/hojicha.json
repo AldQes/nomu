@@ -1,0 +1,9 @@
+{
+  "id": "hojicha",
+  "name": "Hojicha",
+  "order": 4,
+  "items": [
+    { "name": "Iced vanilla Hojicha", "price": 7.9 },
+    { "name": "Coco Hojicha Cloud", "price": 8.9 }
+  ]
+}

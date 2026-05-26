@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "image": "/images/NOMU_PIC_3.jpeg",
+    "imageAlt": "NOMU Zurich café interior with rattan pendant lights and olive tree",
+    "title": "All-Day Brunch & Matcha Bar",
+    "subtitle": "Zurich's calm corner for mindful eating.",
+    "primaryCtaText": "Reserve a Table",
+    "secondaryCtaText": "View Menu"
+  },
+  "intro": {
+    "heading": "A calm corner in the heart of Zurich",
+    "body": "NOMU is an all-day brunch café and matcha bar where Scandi minimalism meets Japanese warmth. From our signature toasts on traditional Swiss Pane Maggie bread to hand-crafted matcha drinks, every plate and cup is made with care. Come for the food, stay for the calm."
+  },
+  "featured": {
+    "heading": "Menu Highlights",
+    "subheading": "A taste of what awaits you at NOMU.",
+    "ctaText": "View Full Menu",
+    "items": [
+      {
+        "name": "Creamy Burrata",
+        "description": "Homemade guacamole, burrata, cherry tomatoes, balsamico, seed mix",
+        "image": "/images/NOMU_PIC_1.jpeg",
+        "price": "17.60"
+      },
+      {
+        "name": "Yoghurt Granola Bowl",
+        "description": "Greek yoghurt, house granola, seasonal fruit, local honey",
+        "image": "/images/NOMU_PIC__5.jpeg",
+        "price": "8.60"
+      },
+      {
+        "name": "Iced Matcha Latte",
+        "description": "Premium ceremonial matcha, oat milk, poured over ice",
+        "image": "/images/NOMU_PIC_2.jpeg",
+        "price": "6.90"
+      },
+      {
+        "name": "Truffle Dream",
+        "description": "Homemade truffle cream cheese, wild mushrooms, parmesan",
+        "image": "/images/NOMU_PIC__7.jpeg",
+        "price": "18.90"
+      }
+    ]
+  },
+  "reservation": {
+    "heading": "Reserve a Table",
+    "subheading": "Book your spot at NOMU. We'll save a seat for you."
+  },
+  "eventsTeaser": {
+    "image": "/images/NOMU_PIC__6.jpeg",
+    "imageAlt": "NOMU branded takeaway packaging and drinks",
+    "heading": "Private Events",
+    "body": "Host your next celebration at NOMU. From birthdays and baby showers to corporate gatherings and brand activations — our space is yours for the occasion. Capacity, catering, and custom packages available on request.",
+    "ctaText": "Learn More"
+  }
+}

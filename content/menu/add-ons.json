@@ -1,0 +1,10 @@
+{
+  "id": "add-ons",
+  "name": "Add-ons",
+  "order": 5,
+  "items": [
+    { "name": "Vanilla Cold Foam", "price": 1.0, "isAddOn": true, "priceNote": "+1 CHF" },
+    { "name": "Extra Shot", "price": 1.0, "isAddOn": true, "priceNote": "+1 CHF" },
+    { "name": "Extra Syrup", "price": 1.0, "isAddOn": true, "priceNote": "+1 CHF" }
+  ]
+}

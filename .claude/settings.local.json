@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(///wsl.localhost/ubuntu/root/**)",
+      "Bash(npm install *)",
+      "PowerShell(wsl -d ubuntu -- bash -c \"cd /root/nomu_local && npm install --save-dev decap-server 2>&1 | tail -30\")",
+      "Bash(wsl -d ubuntu -- bash -c \"grep -qE 'Ready in|Error|error|EADDRINUSE' /tmp/nomu-dev.log 2>/dev/null\")",
+      "Bash(wsl -d ubuntu -- bash -c \"tail -40 /tmp/nomu-dev.log\")",
+      "PowerShell(wsl -d ubuntu -- bash -c \"for p in / /menu /contact /private-events /admin/; do echo \\\\\"--- \\\\$p ---\\\\\"; curl -s -o /dev/null -w 'HTTP %{http_code}  size=%{size_download}\\\\n' http://localhost:3000\\\\$p; done\")",
+      "PowerShell(wsl -d ubuntu -- bash -c \"kill $\\(pgrep -f 'next-server' 2>/dev/null\\) $\\(pgrep -f 'next dev' 2>/dev/null\\) 2>/dev/null; sleep 1; cd /root/nomu_local && nohup node node_modules/next/dist/bin/next dev > /tmp/nomu-dev.log 2>&1 & echo started pid=$!\")",
+      "Bash(wsl -d ubuntu -- bash -c \"grep -qE 'Ready|Error|error|EADDR' /tmp/nomu-dev.log 2>/dev/null\")",
+      "Bash(wsl -d ubuntu -- bash -c \"head -50 /tmp/nomu-dev.log\")",
+      "Bash(wsl -d ubuntu -- bash -c \"cd /root/nomu_local && node node_modules/next/dist/bin/next dev\")",
+      "Bash(wsl -d ubuntu -- bash -c \"grep -qE 'Ready|Error|EADDR' /tmp/nomu-dev.log 2>/dev/null\")",
+      "Bash(wsl -d ubuntu -- bash -c \"head -20 /tmp/nomu-dev.log\")"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "all-day-toast",
+  "name": "All Day Toast",
+  "order": 8,
+  "description": "All toasts served on traditional Swiss Pane Maggie bread",
+  "image": "/images/NOMU_PIC_1.jpeg",
+  "items": [
+    {
+      "name": "Creamy Burrata",
+      "price": 17.6,
+      "description": "Homemade guacamole, burrata, cherry tomatoes, balsamico, seed mix, chili flakes"
+    },
+    {
+      "name": "Truffle Dream",
+      "price": 18.9,
+      "description": "Homemade truffle cream cheese, mushrooms, parmesan"
+    },
+    {
+      "name": "Pinkado",
+      "price": 16.5,
+      "description": "Homemade beetroot hummus, avocado, feta, pomegranate, basilicum oil, seed mix"
+    },
+    {
+      "name": "Smokey Salmon",
+      "price": 18.7,
+      "description": "Cream cheese, smoked salmon, cucumber, basilicum oil, chickpeas"
+    }
+  ]
+}

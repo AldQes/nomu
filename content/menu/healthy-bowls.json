@@ -1,0 +1,9 @@
+{
+  "id": "healthy-bowls",
+  "name": "Healthy Bowls",
+  "order": 7,
+  "image": "/images/NOMU_PIC__7.jpeg",
+  "items": [
+    { "name": "Yoghurt Granola Bowl", "price": 8.6 }
+  ]
+}

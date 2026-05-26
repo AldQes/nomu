@@ -1,0 +1,18 @@
+{
+  "name": "NOMU Zurich",
+  "address": {
+    "street": "Bahnhofplatz 4a Glattbrugg",
+    "country": "Switzerland"
+  },
+  "phone": "+41 79 175 80 80",
+  "phoneHref": "+41791758080",
+  "email": "hello@nomuzurich.ch",
+  "instagram": {
+    "handle": "@nomu.zurich",
+    "url": "https://www.instagram.com/nomu.zurich/"
+  },
+  "hours": [
+    { "day": "Tuesday – Sunday", "hours": "10:00 – 19:45" }
+  ],
+  "mapEmbedUrl": "https://maps.google.com/maps?q=nomu%20glattbrug&t=m&z=16&ie=UTF8&iwloc=&output=embed"
+}
