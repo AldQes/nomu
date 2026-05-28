@@ -8,7 +8,7 @@
     "secondaryCtaText": "View Menu"
   },
   "intro": {
-    "heading": "A calm corner in the heart of Zurich",
+    "heading": "A calm corner near the heart of Zurich",
     "body": "NOMU is an all-day brunch café and matcha bar where Scandi minimalism meets Japanese warmth. From our signature toasts on traditional Swiss Pane Maggie bread to hand-crafted matcha drinks, every plate and cup is made with care. Come for the food, stay for the calm."
   },
   "featured": {
@@ -19,26 +19,38 @@
       {
         "name": "Creamy Burrata",
         "description": "Homemade guacamole, burrata, cherry tomatoes, balsamico, seed mix",
-        "image": "/images/tomatoesandburrata-9-min-scaled.jpg",
+        "image": "/images/img_3455.jpeg",
         "price": "17.60"
-      },
-      {
-        "name": "Yoghurt Granola Bowl",
-        "description": "Greek yoghurt, house granola, seasonal fruit, local honey",
-        "image": "/images/NOMU_PIC__5.jpeg",
-        "price": "8.60"
-      },
-      {
-        "name": "Iced Matcha Latte",
-        "description": "Premium ceremonial matcha, oat milk, poured over ice",
-        "image": "/images/NOMU_PIC_2.jpeg",
-        "price": "6.90"
       },
       {
         "name": "Truffle Dream",
         "description": "Homemade truffle cream cheese, wild mushrooms, parmesan",
-        "image": "/images/NOMU_PIC__7.jpeg",
+        "image": "/images/img_9045.jpeg",
         "price": "18.90"
+      },
+      {
+        "name": "Pinkado",
+        "description": "Homemade beetroot hummus, Avocado, Feta, Pomegranate, Basilicum-oil, Seed mix",
+        "image": "/images/4739a756-2fe3-4f98-bf01-9232d54ba3f7.jpeg",
+        "price": "16.50"
+      },
+      {
+        "name": "Smokey Salmon",
+        "description": "Cream cheese, Smoked Salmon, Cucumber, Basilicum-oil, Chickpeas, Dill",
+        "image": "/images/7076bf00-21a6-492a-bfb1-05186bc8642f.jpeg",
+        "price": "18.70"
+      },
+      {
+        "name": "Yoghurt Granola Bowl",
+        "description": "Greek yoghurt, house granola, seasonal fruit, local honey",
+        "image": "/images/NOMU_PIC_4.jpeg",
+        "price": "11.20"
+      },
+      {
+        "name": "Iced Matcha Latte",
+        "description": "Premium ceremonial matcha, any kind of milk, poured over ice",
+        "image": "/images/img_2695.jpeg",
+        "price": "6.90"
       }
     ]
   },
@@ -47,7 +59,7 @@
     "subheading": "Book your spot at NOMU. We'll save a seat for you."
   },
   "eventsTeaser": {
-    "image": "/images/NOMU_PIC__6.jpeg",
+    "image": "/images/img_0094.jpeg",
     "imageAlt": "NOMU branded takeaway packaging and drinks",
     "heading": "Private Events",
     "body": "Host your next celebration at NOMU. From birthdays and baby showers to corporate gatherings and brand activations — our space is yours for the occasion. Capacity, catering, and custom packages available on request.",
