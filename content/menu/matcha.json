@@ -1,16 +1,40 @@
 {
   "id": "matcha",
-  "name": "Matcha",
+  "name": "Iced Matcha",
   "order": 3,
-  "image": "/images/NOMU_PIC_4.jpeg",
+  "image": "/images/851d318d-9112-48bb-a78f-1bd27a9953d7.jpeg",
   "items": [
-    { "name": "Iced matcha latte", "price": 6.9 },
-    { "name": "Strawberry Kiss", "price": 8.9 },
-    { "name": "Vanilla Dream", "price": 8.9 },
-    { "name": "Mango Matcha", "price": 8.9 },
-    { "name": "Cherry Vanilla", "price": 9.9 },
-    { "name": "White Choco", "price": 8.9 },
-    { "name": "Black Mulberry", "price": 9.9 },
-    { "name": "Coco Cloud", "price": 9.9 }
+    {
+      "name": "Iced matcha latte",
+      "price": 6.9
+    },
+    {
+      "name": "Strawberry Kiss",
+      "price": 8.9
+    },
+    {
+      "name": "Vanilla Dream",
+      "price": 8.9
+    },
+    {
+      "name": "Mango Matcha",
+      "price": 8.9
+    },
+    {
+      "name": "Cherry Vanilla",
+      "price": 9.9
+    },
+    {
+      "name": "White Choco",
+      "price": 8.9
+    },
+    {
+      "name": "Double Blueberry",
+      "price": 6.4
+    },
+    {
+      "name": "Coco Cloud",
+      "price": 9.9
+    }
   ]
 }
