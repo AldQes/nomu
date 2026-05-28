@@ -1,9 +1,12 @@
 {
   "id": "healthy-bowls",
-  "name": "Healthy Bowls",
+  "name": "Healthy Granola Bowl",
   "order": 7,
   "image": "/images/NOMU_PIC__7.jpeg",
   "items": [
-    { "name": "Yoghurt Granola Bowl", "price": 8.6 }
+    {
+      "name": "Yoghurt Granola Bowl",
+      "price": 11.2
+    }
   ]
 }
