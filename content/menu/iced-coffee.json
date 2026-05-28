@@ -2,11 +2,23 @@
   "id": "iced-coffee",
   "name": "Iced Coffee",
   "order": 2,
-  "image": "/images/NOMU_PIC_2.jpeg",
+  "image": "/images/img_4189.jpeg",
   "items": [
-    { "name": "Iced latte", "price": 6.0 },
-    { "name": "Iced Caramel latte", "price": 7.2 },
-    { "name": "Iced Vanilla latte", "price": 7.2 },
-    { "name": "Iced Cinnamon latte", "price": 7.4 }
+    {
+      "name": "Iced latte",
+      "price": 6
+    },
+    {
+      "name": "Iced Caramel latte",
+      "price": 7.2
+    },
+    {
+      "name": "Iced Vanilla latte",
+      "price": 7.2
+    },
+    {
+      "name": "Iced Cinnamon latte",
+      "price": 10.2
+    }
   ]
 }
