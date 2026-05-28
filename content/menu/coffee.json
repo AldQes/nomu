@@ -3,10 +3,26 @@
   "name": "Coffee",
   "order": 1,
   "items": [
-    { "name": "Espresso", "price": 4.0 },
-    { "name": "Cappuccino", "price": 5.7 },
-    { "name": "Latte macchiato", "price": 5.7 },
-    { "name": "Milchkaffee", "price": 4.8 },
-    { "name": "Americano", "price": 4.2 }
-  ]
+    {
+      "name": "Espresso",
+      "price": 4
+    },
+    {
+      "name": "Cappuccino",
+      "price": 5.7
+    },
+    {
+      "name": "Latte macchiato",
+      "price": 5.7
+    },
+    {
+      "name": "Milchkaffee",
+      "price": 4.8
+    },
+    {
+      "name": "Americano",
+      "price": 4.2
+    }
+  ],
+  "image": "/images/img_7271.jpeg"
 }
